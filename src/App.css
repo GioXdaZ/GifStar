@@ -1,0 +1,16 @@
+.gifstar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.gif {
+  padding: 0 2px;
+}
+
+.loader {
+  margin-top: 50px;
+  color: #128;
+}
