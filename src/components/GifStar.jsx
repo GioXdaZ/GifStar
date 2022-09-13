@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { Loader } from "./Loader";
-import { Paginate } from "./Paginate";
+// import { Paginate } from "./Paginate";
 
 export const GifStar = () => {
   const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ export const GifStar = () => {
   const [search, setSearch] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(25);
+  const [itemsPerPage, setItemsPerPage] = useState(50);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
@@ -104,9 +104,9 @@ export const GifStar = () => {
     setIsLoading(false);
   };
 
-  const pageSelected = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  // const pageSelected = (pageNumber) => {
+  //   setCurrentPage(pageNumber);
+  // };
 
   return (
     <div>
@@ -114,7 +114,7 @@ export const GifStar = () => {
         <div className="flex-1">
           <a className="normal-case text-xl">GifStar</a>
         </div>
-        <div className="form-control justify-center items-center mx-auto">
+        <div className="form-control">
           <div className="input-group">
             <input
               onChange={handleSearchChange}
@@ -142,12 +142,12 @@ export const GifStar = () => {
           </div>
         </div>
 
-        <Paginate
+        {/* <Paginate
           pageSelected={pageSelected}
           currentPage={currentPage}
           itemsPerPage={itemsPerPage}
           totalItems={data.length}
-        />
+        /> */}
       </div>
       {renderError()}
       <div className="gifstar">{renderGifs()}</div>

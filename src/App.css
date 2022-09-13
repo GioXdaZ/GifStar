@@ -4,10 +4,15 @@
   justify-content: center;
   width: 80%;
   margin: 0 auto;
+  gap: 15px;
 }
 
 .gif {
   padding: 0 2px;
+  border: 4px solid rgb(66, 66, 66);
+  border-radius: 5px;
+  box-shadow: black 10px 10px 10px;
+
 }
 
 .loader {
