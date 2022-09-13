@@ -113,6 +113,7 @@ export const GifStar = () => {
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <a className="normal-case text-xl">GifStar</a>
+          <p className="ml-1 text-xs">by GioXdaZ</p>
         </div>
         <div className="form-control">
           <div className="input-group">
