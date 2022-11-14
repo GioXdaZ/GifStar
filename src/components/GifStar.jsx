@@ -108,7 +108,7 @@ export const GifStar = () => {
     <div>
       <div className="navbar color">
         <div className="flex-auto justify-center">
-          <a className=" card-title text-4xl">GifStar</a>
+          <a className="text-white card-title text-4xl">GifStar</a>
         </div>
         <div className="form-control">
           <div className="input-group">
