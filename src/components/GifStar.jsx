@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { Loader } from "./Loader";
-// import { Paginate } from "./Paginate";
+import { Footer } from "./Footer";
 
 export const GifStar = () => {
   const [data, setData] = useState([]);
@@ -104,16 +104,11 @@ export const GifStar = () => {
     setIsLoading(false);
   };
 
-  // const pageSelected = (pageNumber) => {
-  //   setCurrentPage(pageNumber);
-  // };
-
   return (
     <div>
-      <div className="navbar bg-base-100">
-        <div className="flex-1">
-          <a className="normal-case text-xl">GifStar</a>
-          <p className="ml-1 text-xs">by GioXdaZ</p>
+      <div className="navbar color">
+        <div className="flex-auto justify-center">
+          <a className=" card-title text-4xl">GifStar</a>
         </div>
         <div className="form-control">
           <div className="input-group">
@@ -142,16 +137,10 @@ export const GifStar = () => {
             </button>
           </div>
         </div>
-
-        {/* <Paginate
-          pageSelected={pageSelected}
-          currentPage={currentPage}
-          itemsPerPage={itemsPerPage}
-          totalItems={data.length}
-        /> */}
       </div>
       {renderError()}
       <div className="gifstar">{renderGifs()}</div>
+      <Footer />
     </div>
   );
 };
